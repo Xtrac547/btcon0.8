@@ -135,11 +135,22 @@ export const [AuthProvider, useAuth] = createContextHook(() => {
     }
 
     try {
+      const hasHardware = await LocalAuthentication.hasHardwareAsync();
+      const isEnrolled = await LocalAuthentication.isEnrolledAsync();
+
+      if (!hasHardware || !isEnrolled) {
+        console.log('Biometric not available: hasHardware=', hasHardware, 'isEnrolled=', isEnrolled);
+        return false;
+      }
+
       const result = await LocalAuthentication.authenticateAsync({
-        promptMessage: 'Authentification requise',
+        promptMessage: 'Déverrouiller Btcon',
         cancelLabel: 'Annuler',
+        fallbackLabel: 'Utiliser le code',
         disableDeviceFallback: false,
       });
+
+      console.log('Biometric auth result:', result.success);
 
       if (result.success) {
         setState(prev => ({

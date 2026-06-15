@@ -17,7 +17,6 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.btcon.wallet",
       "infoPlist": {
-        "NSFaceIDUsageDescription": "Btcon uses Face ID to let users securely unlock the wallet and protect access to sensitive wallet features. Face ID is processed by iOS and Btcon does not access, store, or share biometric data.",
         "NSCameraUsageDescription": "Btcon uses the camera only to scan QR codes containing Bitcoin wallet addresses. This helps users send Bitcoin quickly and accurately without manually typing an address. No photos or videos are recorded, stored, or shared.",
       },
       "config": {

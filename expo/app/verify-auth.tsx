@@ -33,6 +33,12 @@ export default function VerifyAuthScreen() {
     }
   }, [useBiometric, authType]);
 
+  useEffect(() => {
+    if (showBiometric && !isLoading) {
+      handleBiometricAuth();
+    }
+  }, [showBiometric]);
+
   const handleBiometricAuth = async () => {
     if (Platform.OS !== 'web') {
       Haptics.selectionAsync();
