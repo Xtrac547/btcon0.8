@@ -50,8 +50,7 @@
       [
         "expo-secure-store",
         {
-          "configureAndroidBackup": true,
-          "faceIDPermission": "Btcon uses Face ID to let users securely unlock the wallet and protect access to sensitive wallet features. Face ID is processed by iOS and Btcon does not access, store, or share biometric data."
+          "configureAndroidBackup": true
         }
       ],
       [
