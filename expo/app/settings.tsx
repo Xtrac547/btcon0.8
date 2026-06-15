@@ -142,7 +142,7 @@ export default function SettingsScreen() {
               <View style={styles.securityHeaderText}>
                 <Text style={styles.securityTitle}>Authentification</Text>
                 <Text style={styles.securitySubtitle}>
-                  {authType === 'none' ? 'Aucune sécurité activée' : 'Gérer votre code PIN et biométrie'}
+                  {authType === 'none' ? 'Aucune sécurité activée' : 'Gérer votre code PIN et Face ID'}
                 </Text>
               </View>
             </View>
@@ -178,7 +178,7 @@ export default function SettingsScreen() {
                   <View style={styles.authOptionContent}>
                     <Fingerprint color={biometricEnabled ? "#FF8C00" : "#FFF"} size={20} strokeWidth={2} />
                     <Text style={[styles.authOptionText, biometricEnabled && styles.authOptionTextActive]}>
-                      {biometricEnabled ? 'Biométrie activée' : 'Activer la biométrie'}
+                      {biometricEnabled ? 'Face ID activé' : 'Activer Face ID'}
                     </Text>
                   </View>
                 </Pressable>

@@ -216,7 +216,7 @@ export default function VerifyAuthScreen() {
             </View>
             <Text style={styles.title}>Réinitialiser le code PIN</Text>
             <Text style={styles.subtitle}>
-              Utilisez votre empreinte digitale pour réinitialiser votre code PIN
+              Utilisez Face ID pour réinitialiser votre code PIN
             </Text>
 
             {error ? <Text style={styles.errorText}>{error}</Text> : null}
@@ -227,7 +227,7 @@ export default function VerifyAuthScreen() {
                 onPress={handleResetPinWithBio}
                 activeOpacity={0.85}
               >
-                <Text style={styles.buttonText}>Authentifier avec biométrie</Text>
+                <Text style={styles.buttonText}>S'authentifier avec Face ID</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -360,7 +360,7 @@ export default function VerifyAuthScreen() {
               <Fingerprint size={72} color="#FF8C00" strokeWidth={1.5} />
             </View>
             <Text style={styles.title}>Authentification requise</Text>
-            <Text style={styles.subtitle}>{authType === 'biometric' ? 'Utilisez votre empreinte ou Face ID' : 'Utilisez votre empreinte ou Face ID'}</Text>
+            <Text style={styles.subtitle}>Utilisez Face ID</Text>
             
             {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
@@ -370,7 +370,7 @@ export default function VerifyAuthScreen() {
                 onPress={handleBiometricAuth}
                 activeOpacity={0.85}
               >
-                <Text style={styles.buttonText}>Réessayer la biométrie</Text>
+                <Text style={styles.buttonText}>Réessayer Face ID</Text>
               </TouchableOpacity>
 
               {(authType === 'pin' || authType === 'pin-biometric') && (
@@ -392,7 +392,7 @@ export default function VerifyAuthScreen() {
                   <Fingerprint size={72} color="#FF8C00" strokeWidth={1.5} />
                 </View>
                 <Text style={styles.title}>Authentification requise</Text>
-                <Text style={styles.subtitle}>Utilisez votre empreinte ou Face ID</Text>
+                <Text style={styles.subtitle}>Utilisez Face ID</Text>
                 
                 {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
@@ -451,7 +451,7 @@ export default function VerifyAuthScreen() {
                   activeOpacity={0.85}
                 >
                   <Fingerprint size={20} color="#FF8C00" strokeWidth={2} />
-                  <Text style={styles.secondaryButtonText}>Utiliser la biométrie</Text>
+                  <Text style={styles.secondaryButtonText}>Utiliser Face ID</Text>
                 </TouchableOpacity>
               </View>
             )}

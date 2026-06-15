@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Btcon1.2 Clone",
-    "slug": "btcon12-clone",
+    "name": "Btcon",
+    "slug": "btcon",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,12 +15,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.rork.btcon12-clone",
+      "bundleIdentifier": "com.btcon.wallet",
       "infoPlist": {
-        "NSFaceIDUsageDescription": "Allow $(PRODUCT_NAME) to access your Face ID biometric data.",
-        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
-        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone",
-        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos"
+        "NSFaceIDUsageDescription": "Btcon uses Face ID to let users securely unlock the wallet and protect access to sensitive wallet features. Face ID is processed by iOS and Btcon does not access, store, or share biometric data.",
+        "NSCameraUsageDescription": "Btcon uses the camera only to scan QR codes containing Bitcoin wallet addresses. This helps users send Bitcoin quickly and accurately without manually typing an address. No photos or videos are recorded, stored, or shared.",
       },
       "config": {
         "usesNonExemptEncryption": false
@@ -31,17 +29,11 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "app.rork.btcon12_clone",
+      "package": "com.btcon.wallet",
       "permissions": [
         "USE_BIOMETRIC",
         "USE_FINGERPRINT",
         "CAMERA",
-        "RECORD_AUDIO",
-        "READ_MEDIA_IMAGES",
-        "android.permission.RECEIVE_BOOT_COMPLETED",
-        "android.permission.SCHEDULE_EXACT_ALARM",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE",
         "android.permission.VIBRATE"
       ]
     },
@@ -59,21 +51,19 @@
         "expo-secure-store",
         {
           "configureAndroidBackup": true,
-          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+          "faceIDPermission": "Btcon uses Face ID to let users securely unlock the wallet and protect access to sensitive wallet features. Face ID is processed by iOS and Btcon does not access, store, or share biometric data."
         }
       ],
       [
         "expo-local-authentication",
         {
-          "faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
+          "faceIDPermission": "Btcon uses Face ID to let users securely unlock the wallet and protect access to sensitive wallet features. Face ID is processed by iOS and Btcon does not access, store, or share biometric data."
         }
       ],
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
-          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
-          "recordAudioAndroid": true
+          "cameraPermission": "Btcon uses the camera only to scan QR codes containing Bitcoin wallet addresses. This helps users send Bitcoin quickly and accurately without manually typing an address. No photos or videos are recorded, stored, or shared."
         }
       ],
       [

@@ -156,7 +156,7 @@ export default function SetupAuthScreen() {
                 activeOpacity={0.85}
               >
                 <Fingerprint size={24} color="#000" strokeWidth={2} />
-                <Text style={styles.optionButtonText}>Empreinte digitale uniquement</Text>
+                <Text style={styles.optionButtonText}>Face ID uniquement</Text>
               </TouchableOpacity>
             )}
 
@@ -170,7 +170,7 @@ export default function SetupAuthScreen() {
               }}
               activeOpacity={0.85}
             >
-              <Text style={styles.optionButtonText}>Code PIN {isBiometricAvailable ? '+ Empreinte' : ''}</Text>
+              <Text style={styles.optionButtonText}>Code PIN {isBiometricAvailable ? '+ Face ID' : ''}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -208,9 +208,9 @@ export default function SetupAuthScreen() {
           <View style={styles.iconContainer}>
             <Fingerprint size={72} color="#FF8C00" strokeWidth={1.5} />
           </View>
-          <Text style={styles.title}>Activer la biométrie ?</Text>
+          <Text style={styles.title}>Activer Face ID</Text>
           <Text style={styles.subtitle}>
-            Vous pourrez utiliser votre empreinte digitale ou Face ID en plus du code PIN
+            Vous pourrez utiliser Face ID en plus du code PIN
           </Text>
 
           <View style={styles.buttonContainer}>
@@ -224,7 +224,7 @@ export default function SetupAuthScreen() {
               }}
               activeOpacity={0.85}
             >
-              <Text style={styles.optionButtonText}>Activer la biométrie</Text>
+              <Text style={styles.optionButtonText}>Activer Face ID</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
